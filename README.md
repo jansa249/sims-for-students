@@ -4,8 +4,9 @@ Tento repozitář slouží jako studijní materiál pro vizualizaci chignolinu. 
 
 ---
 
-## 📥 Soubory ke stažení
+## Soubory ke stažení
 *Klikněte na zelené **"<> CODE"** a stáhněte .zip **"Download ZIP"**.*
+Extrahujte soubor, najdete topologii, trajektorii a graf RMSD v .pdf.
 
 | Soubor | Typ | Funkce |
 | :--- | :--- | :--- |
@@ -14,7 +15,7 @@ Tento repozitář slouží jako studijní materiál pro vizualizaci chignolinu. 
 
 ---
 
-## 🚀 Instrukce pro PyMOL
+## Instrukce pro PyMOL
 
 Aby simulace fungovala, musíte soubory načíst ve správném pořadí:
 
@@ -22,7 +23,9 @@ Aby simulace fungovala, musíte soubory načíst ve správném pořadí:
 2. **Načtěte DCD:** Přetáhněte soubor `.dcd` do okna PyMOL nebo použijte `File -> Open`.
 3. **Přehrávání:** V pravém dolním rohu uvidíte ovládací panel (tlačítko Play).
 
-### 💡 Doporučené příkazy pro vizualizaci
+Trajektorii je potřeba načíst vždy až po topologií, aby se pohyb přiřadíl k správným atomům.
+
+### Doporučené příkazy pro vizualizaci
 Zkopírujte tyto příkazy do řádku v PyMOLu pro lepší přehlednost:
 
 ```python
@@ -34,3 +37,9 @@ zoom
 as cartoon
 as sticks
 as sticks, bb.
+```
+## Úkoly
+
+Simulace ukazuje sbalování chignolinu z lineární struktury.
+RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.
+Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.
