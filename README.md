@@ -1,6 +1,6 @@
-# 🧬 Simulace foldingu: Chignolin (CLN025)
+# 🧬 Simulace: Chignolin (CLN025)
 
-Tento repozitář slouží jako studijní materiál pro vizualizaci **unbiased folding simulace** chignolinu. Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin), což z něj dělá ideální model pro pochopení sbalování proteinů.
+Tento repozitář slouží jako studijní materiál pro vizualizaci chignolinu. Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin), což z něj dělá ideální model pro pochopení sbalování proteinů.
 
 ---
 
