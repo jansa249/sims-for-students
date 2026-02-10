@@ -29,11 +29,20 @@ Trajektorii je potřeba načíst vždy až po topologií, aby se pohyb přiřad�
 Zkopírujte tyto příkazy do řádku v PyMOLu pro lepší přehlednost:
 
 ```python
-# Vyčištění a zobrazení struktury
-remove ino
-zoom
+remove ino  # Odstranění iontů kolem proteinu
+zoom        # Přiblížení
+```
+Spusťte simulaci. Molekula se bude rychle otáčet.
+Přeložením jednotlivých snímků přes sebe rotaci zastavíme pomocí `intra_fit` a hektický pohyb vyhladíme příkazem `smooth`:
 
-# Zvýraznění ruzných částí struktur
+```python
+intra_fit polymer
+smooth  # Interpolace pohybu
+```
+
+Postupně si zobrazte molekulu v různých zobrazení:
+
+```python
 as cartoon
 as sticks
 as sticks, bb.
@@ -41,5 +50,6 @@ as sticks, bb.
 ## Úkoly
 
 Simulace ukazuje sbalování chignolinu z lineární struktury.
-RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.
-Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.
+1. Porovnejte chování proteinu s hodnotami v grafu RMSD (chignolin-rmsd.pdf)
+  _RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO._
+2. Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.  
