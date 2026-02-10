@@ -1,6 +1,6 @@
 # 🧬 Simulace: Chignolin (CLN025)
 
-Tento repozitář slouží jako studijní materiál pro vizualizaci chignolinu. Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin), což z něj dělá ideální model pro pochopení sbalování proteinů.
+Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin), což z něj dělá ideální model pro pochopení sbalování proteinů.
 
 ---
 
@@ -50,6 +50,6 @@ as sticks, bb.
 ## Úkoly
 
 Simulace ukazuje sbalování chignolinu z lineární struktury.
-1. Porovnejte chování proteinu s hodnotami v grafu RMSD (chignolin-rmsd.pdf)
+1. Porovnejte chování proteinu s hodnotami v grafu RMSD (chignolin-rmsd.pdf)  
   _RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO._
 2. Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.  
