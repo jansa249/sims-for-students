@@ -51,5 +51,12 @@ as sticks, bb.
 
 Simulace ukazuje sbalování chignolinu z lineární struktury.
 1. Porovnejte chování proteinu s hodnotami v grafu RMSD (chignolin-rmsd.pdf)  
-  _RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO._
-2. Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.  
+   _(RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.)_
+2. Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.
+   Vytvořte objekt jen z první struktury ensemblu:
+   ```python
+   create experimental, 1UAO, 1  # , 1 znamená, že kopírujete první strukturu z 18
+   delete 1UAO  # původní objekt už nepotřebujeme
+   extra_fit polymer  # přeložit přes sebe polymerní části objektů
+   ```
+3. Znovu se podívejte na simulaci a graf RMSD.
