@@ -2,63 +2,87 @@
 
 Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin), což z něj dělá ideální model pro pochopení sbalování proteinů.
 
----
-
-## Soubory ke stažení
+## 1. Stažení simulace
 *Klikněte na zelené **"<> CODE"** a stáhněte .zip **"Download ZIP"**.*
-Extrahujte soubor, najdete topologii, trajektorii a graf RMSD v .pdf.
+Extrahujte .zip soubor. Ve složce najdete topologii, trajektorii a graf RMSD v .pdf.
 
-| Soubor | Typ | Funkce |
-| :--- | :--- | :--- |
-| **Topologie** | `.pdb` | Statická struktura a názvy atomů |
-| **Trajektorie** | `.dcd` | Záznam pohybu atomů |
+Simulace se obvykle ukládají jako dvojice souborů:
+- **Topologie** (`.pdb`) obsahuje informace o atomech (atomové typy, vazby, ...)
+- **Trajektorie** (`.dcd`) obsahuje souřadnice atomů pro několik snímků
 
----
+Různé simulační programy zapisují topologii i trajektorii různě:
+|Program|top|traj|
+|:-|:-:|:-:|
+|AMBER|.prmtop|.traj / .nc|
+|Gromacs|.tpr|.xtc|
+|CHARMM|.psf|.dcd|
+|OpenMM|.pdb|.dcd|
 
-## Instrukce pro PyMOL
-
+## 2. Načítání simulace
 Aby simulace fungovala, musíte soubory načíst ve správném pořadí:
 
 1. **Načtěte PDB:** Přetáhněte soubor `.pdb` do okna PyMOL nebo použijte `File -> Open`.
 2. **Načtěte DCD:** Přetáhněte soubor `.dcd` do okna PyMOL nebo použijte `File -> Open`.
-3. **Přehrávání:** V pravém dolním rohu uvidíte ovládací panel (tlačítko Play).
 
 Trajektorii je potřeba načíst vždy až po topologií, aby se pohyb přiřadíl k správným atomům.
 
-### Doporučené příkazy pro vizualizaci
-**Spusťte simulaci.** Zkopírujte tyto příkazy do řádku v PyMOLu pro lepší přehlednost:
+## 3. Příprava simulace
+
+**Spusťte simulaci**. V pravém dolním rohu uvidíte ovládací panel (tlačítko Play).
+Protein a ionty soli se budou rychle pohybovat. Pro lepší přehlednost odstraníme ionty.
+> Během simulace je protein obklopený vodou, ukládání souřadnic pro simulace k analýze většinou ale není užitečné.
+Mazání vod snižuje velikost trajektorie z 204 MB na 9.9 MB, protože ukládame jen souřadnice 165 atomů, celý systém obsahuje 8927.
 
 ```python
 remove ino  # Odstranění iontů kolem proteinu
+zoom        # Přiblížení
 ```
 
-**Spusťte simulaci.** Molekula se bude rychle otáčet.
-Rotaci a translaci zastavíme pomocí `intra_fit` a hektický pohyb vyhladíme příkazem `smooth`:
+**Spusťte simulaci**. Protein se bude velmi rychle pohybovat a otáčet, protože během simulace ve vodě volně difunduje.
+Přeložením jednotlivých snímků přes sebe pomocí `intra_fit` translaci i rotaci zastavíme. Hektický pohyb vyhladíme příkazem `smooth`:
+
 ```python
 intra_fit polymer
 smooth  # Interpolace pohybu
-zoom
 ```
+
+Nyní máme připravenou simulaci tak, abychom si ji mohli prohlédnout.
+
+## 4. Prohlížení simulace
 
 Postupně si zobrazte molekulu v různých zobrazení:
 
 ```python
 as cartoon
+# nebo
 as sticks
+# nebo
 as sticks, bb.
 ```
-## Úkoly
 
-Simulace ukazuje sbalování chignolinu z lineární struktury.
-1. Porovnejte chování proteinu s hodnotami v grafu RMSD (chignolin-rmsd.pdf)  
-   _(RMSD je průměrná vzdálenost atomů od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.)_
-2. Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.
+## 5. Úkoly
+
+1. Prohlédněte si celou simulaci. Co lze pozorovat?
+
+1. Porovnejte chování proteinu s průběhem hodnot RMSD v grafu `chignolin-rmsd.pdf`.  
+
+   >RMSD je průměrná vzdálenost atomů (jendotka Å nebo nm) od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.
+
+1. Ve stejném okně si stáhněte tuto strukturu a porovnejte ji se strukturou ze simulace.
    Vytvořte objekt jen z první struktury ensemblu:
    ```python
-   create experimental, 1UAO, 1  # , 1 znamená, že kopírujete první strukturu z 18
-   delete 1UAO  # původní objekt už nepotřebujeme
+   create exp, 1UAO, 1  # , 1 znamená, že kopírujete první strukturu z 18
+   delete 1UAO  # původní objekt už nepotřebujeme, máme novy objekt 'exp'
    # Přeložení trajektorie a reference
-   extra_fit polymer  # polymerní části objektů
+   extra_fit polymer  # polymerní části v3objektů
    extra_fit bb.  # páteře objektů
    ```
-3. Znovu se podívejte na simulaci a graf RMSD.
+
+1. Znovu se podívejte na simulaci a graf RMSD.
+
+1. Zobrazte si vodíkove vazby, které se během simulace vytvoří.
+   ```python
+   dist hbonds, chignolin, chignolin, mode=2
+   ```
+
+   >Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
