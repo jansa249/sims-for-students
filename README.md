@@ -26,18 +26,18 @@ Aby simulace fungovala, musíte soubory načíst ve správném pořadí:
 Trajektorii je potřeba načíst vždy až po topologií, aby se pohyb přiřadíl k správným atomům.
 
 ### Doporučené příkazy pro vizualizaci
-Zkopírujte tyto příkazy do řádku v PyMOLu pro lepší přehlednost:
+**Spusťte simulaci.** Zkopírujte tyto příkazy do řádku v PyMOLu pro lepší přehlednost:
 
 ```python
 remove ino  # Odstranění iontů kolem proteinu
-zoom        # Přiblížení
 ```
-Spusťte simulaci. Molekula se bude rychle otáčet.
-Přeložením jednotlivých snímků přes sebe rotaci zastavíme pomocí `intra_fit` a hektický pohyb vyhladíme příkazem `smooth`:
 
+**Spusťte simulaci.** Molekula se bude rychle otáčet.
+Rotaci a translaci zastavíme pomocí `intra_fit` a hektický pohyb vyhladíme příkazem `smooth`:
 ```python
 intra_fit polymer
 smooth  # Interpolace pohybu
+zoom
 ```
 
 Postupně si zobrazte molekulu v různých zobrazení:
@@ -57,6 +57,8 @@ Simulace ukazuje sbalování chignolinu z lineární struktury.
    ```python
    create experimental, 1UAO, 1  # , 1 znamená, že kopírujete první strukturu z 18
    delete 1UAO  # původní objekt už nepotřebujeme
-   extra_fit polymer  # přeložit přes sebe polymerní části objektů
+   # Přeložení trajektorie a reference
+   extra_fit polymer  # polymerní části objektů
+   extra_fit bb.  # páteře objektů
    ```
 3. Znovu se podívejte na simulaci a graf RMSD.
