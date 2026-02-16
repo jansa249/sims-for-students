@@ -4,7 +4,6 @@ Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin
 
 ## 1. Stažení simulace
 <!-- *Klikněte na zelené **"<> Code"** a stáhněte .zip **"Download ZIP"**.* -->
-<!-- Extrahujte .zip soubor. ve složce najdete topologii, trajektorii a graf RMSD. -->
 
 Simulace se obvykle ukládají jako dvojice souborů:
 |Soubor|Funkce|
@@ -13,9 +12,7 @@ Simulace se obvykle ukládají jako dvojice souborů:
 |**Trajektorie** (`.dcd`)| obsahuje souřadnice atomů pro několik snímků.|
 
 Stáhněte si .zip soubor [__`zde`__](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.zip?download=).
-
-
-Stáhněte si topologii a trajektorii klikem na `top` a `traj`.
+Extrahujte .zip soubor. Ve složce najdete topologii, trajektorii a graf RMSD.
 
 Různé simulační programy zapisují topologii i trajektorii různě:
 |Program|top|traj|
@@ -31,7 +28,10 @@ Aby simulace fungovala, musíte soubory načíst ve správném pořadí:
 1. **Načtěte pdb:** přetáhněte soubor `.pdb` do okna pymol nebo použijte `File -> Open`.
 2. **Načtěte dcd:** přetáhněte soubor `.dcd` do okna pymol nebo použijte `File -> Open`.
 
-Trajektorii je potřeba načíst vždy až po topologií, aby se pohyb přiřadíl k správným atomům.
+<!-- Trajektorii je potřeba načíst vždy až po topologií, aby se pohyb přiřadíl k správným atomům. -->
+> [!TIP]
+> **Pamatujte:** Vždy načítáme nejdříve topologii (`.pdb`), až potom trajektorii (`.dcd`).
+
 
 ## 3. Příprava simulace
 
