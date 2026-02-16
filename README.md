@@ -48,7 +48,7 @@ smooth  # interpolace pohybu
 
 Nyní máme připravenou simulaci tak, abychom si ji mohli prohlédnout.
 
-## 4. prohlížení simulace
+## 4. Prohlížení simulace
 
 Postupně si zobrazte molekulu v různých zobrazení:
 
@@ -76,18 +76,19 @@ as sticks, bb.
 
 1. Zobrazte si vodíkove vazby, které se během simulace vytvoří.
    ```python
-   dist hbonds, chignolin, chignolin, mode=2  # mode=2 počítá jen vzdálenosti polárních skupin
+   dist hbonds, chignolin, chignolin, mode=2
+   # mode=2 počítá jen vzdálenosti polárních skupin
    ```
 
    >Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
-1. Ve stejném okně si stáhněte tuto referenční strukturu a porovnejte ji se strukturou ze simulace.
+1. Ve stejném okně si stáhněte tuto referenční strukturu (PDB ID 1UAO) a porovnejte ji se strukturou ze simulace.
    Vytvořte objekt jen z první struktury ensemblu:
    ```python
    create exp, 1uao, 1  # , 1 znamená, že kopírujete první strukturu z 18
    delete 1uao  # původní objekt už nepotřebujeme, máme novy objekt 'exp'
    # přeložení trajektorie a reference
-   extra_fit polymer  # polymerní části v3objektů
+   extra_fit polymer  # polymerní části v objektů
    extra_fit bb.  # páteře objektů
    ```
 
