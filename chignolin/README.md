@@ -7,12 +7,13 @@ Chignolin je nejmenší protein s jasně definovanou strukturou ($\beta$-hairpin
 <!-- Extrahujte .zip soubor. ve složce najdete topologii, trajektorii a graf RMSD. -->
 
 Simulace se obvykle ukládají jako dvojice souborů:
-|Soubor|Download|Funkce|
-|:-:|:-:|:-|
-|**Topologie** (`.pdb`)|[`top`](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.pdb?download=)| obsahuje informace o atomech (atomové typy, vazby, ...).|
-|**Trajektorie** (`.dcd`)|[`traj`](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.dcd?download=)| obsahuje souřadnice atomů pro několik snímků.|
+|Soubor|Funkce|
+|:-:|:-|
+|**Topologie** (`.pdb`)| obsahuje informace o atomech (atomové typy, vazby, ...).|
+|**Trajektorie** (`.dcd`)| obsahuje souřadnice atomů pro několik snímků.|
 
-<a href="https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.pdb?download=" download>📥 Click here to Download chignolin.pdb</a>
+Stáhněte si .zip soubor [__`zde`__](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.zip?download=).
+
 
 Stáhněte si topologii a trajektorii klikem na `top` a `traj`.
 
