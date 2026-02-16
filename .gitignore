@@ -1,0 +1,11 @@
+# Ignore individual simulation files
+*.pdb
+*.dcd
+*.nc
+*.xtc
+
+# Temporary images
+*.svg
+
+# DO NOT ignore zip files
+!*.zip
