@@ -12,6 +12,8 @@ Simulace se obvykle ukládají jako dvojice souborů:
 |**Topologie** (`.pdb`)|[`top`](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.pdb?download=)| obsahuje informace o atomech (atomové typy, vazby, ...).|
 |**Trajektorie** (`.dcd`)|[`traj`](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.dcd?download=)| obsahuje souřadnice atomů pro několik snímků.|
 
+<a href="https://github.com/jansa249/sims-for-students/raw/refs/heads/main/chignolin/chignolin.pdb?download=" download>📥 Click here to Download chignolin.pdb</a>
+
 Stáhněte si topologii a trajektorii klikem na `top` a `traj`.
 
 Různé simulační programy zapisují topologii i trajektorii různě:
