@@ -69,7 +69,7 @@ as sticks, bb.
    >RMSD (Root Mean Square Deviation) je průměrná vzdálenost atomů (jendotka Å nebo nm) od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.
    >Výpočet RMSD se nejčastěji provádí pouze pro atomy hlavní řetězce (v proteinu C,N,Cα,O), čímž se eliminuje pohyb mobilních postranních řetězců, který neodráží celkovou stabilitu sbalení.
    
-   $$ RMSD = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_{i,REF}-x_{i,SIM})^2} $$  
+   $$RMSD = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_{i,REF}-x_{i,SIM})^2}$$
 
     ![Graf RMSD](chignolin-rmsd.png)
 
