@@ -116,7 +116,7 @@ as lines
    ```
 
    > [!TIP]
-   >Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
+   > Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
 1. Vytvořte obrázek obsahující DNA a jen ligand vázaný na správné místo.
     Zvolte zobrazení `spheres`, odstraňte vodíky a zabarvěte atomy uhlíku DNA a ligandu různě.
