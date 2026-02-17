@@ -86,6 +86,7 @@ as sticks, bb.
    # mode=2 počítá jen vzdálenosti polárních skupin
    ```
 
+   > [!TIP]
    >Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
 1. Ve stejném okně si stáhněte tuto referenční strukturu (PDB ID 1UAO) a porovnejte ji se strukturou ze simulace.

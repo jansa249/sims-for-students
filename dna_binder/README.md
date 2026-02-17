@@ -75,7 +75,7 @@ as lines
     - Jaké části nebo skupiny molekul k interakcím přispívají?  
 
 1. Identifikujte ligand v simulaci.
-   Na stránce [RCSB.com](https://www.rcsb.org/search/chemical) v chemickém vyhledávání nakreslete nějakou podstrukturu ligandu.
+   Na stránce [RCSB.org](https://www.rcsb.org/search/chemical) v chemickém vyhledávání nakreslete nějakou podstrukturu ligandu.
     > Neměla by být příliš malá, (benzenové jádro je skoro všude), ani příliš velká.
 
    <details>
