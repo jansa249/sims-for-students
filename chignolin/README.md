@@ -19,7 +19,6 @@ Různé simulační programy zapisují topologii i trajektorii různě:
 |:-|:-:|:-:|
 |AMBER|.prmtop|.traj / .nc|
 |Gromacs|.tpr|.trr / .xtc|
-|CHARMM|.psf|.dcd|
 |OpenMM|.pdb|.dcd|
 
 ## 2. Načítání simulace
