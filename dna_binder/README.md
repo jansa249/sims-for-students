@@ -99,7 +99,7 @@ as lines
    Klikněte na záznam v databázi. Pod názvem molekuly vpravo najdete __Find Related PDB Entry__. Stiskněte __search__. Zobrazí se Vám listina struktur, které obsahují tento ligand.
 
 3. Porovnejte chování ligandů v simulaci s experimentální strukturou.  
-    Stáhněte si první strukturu z listiny z předchozího úkolu.
+    Stáhněte si jednu strukturu z listiny z předchozího úkolu.
 
     ```python
     fetch [PDB ID STRUKTURY]
