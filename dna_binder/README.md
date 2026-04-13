@@ -13,7 +13,7 @@ Simulace se obvykle ukládají jako dvojice souborů:
 |**Topologie** (`.pdb`)| obsahuje informace o atomech (atomové typy, vazby, ...).|
 |**Trajektorie** (`.dcd`)| obsahuje souřadnice atomů pro několik snímků.|
 
-Stáhněte si .zip soubor [__`zde`__](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/dna_binders/dna_binders.zip?download=).
+Stáhněte si .zip soubor [__`zde`__](https://github.com/jansa249/sims-for-students/raw/refs/heads/main/dna_binder/dna_binder.zip).
 Extrahujte .zip soubor. Ve složce najdete topologii, trajektorii a graf RMSD.
 
 Různé simulační programy zapisují topologii i trajektorii různě:
@@ -21,7 +21,6 @@ Různé simulační programy zapisují topologii i trajektorii různě:
 |:-|:-:|:-:|
 |AMBER|.prmtop|.traj / .nc|
 |Gromacs|.tpr|.trr / .xtc|
-|CHARMM|.psf|.dcd|
 |OpenMM|.pdb|.dcd|
 
 ## 2. Načítání simulace
@@ -74,7 +73,7 @@ as lines
     - Jaké různé způsoby vazby ligandu na DNA existují?
     - Jaké části nebo skupiny molekul k interakcím přispívají?  
 
-1. Identifikujte ligand v simulaci.
+2. Identifikujte ligand v simulaci.
    Na stránce [RCSB.org](https://www.rcsb.org/search/chemical) v chemickém vyhledávání nakreslete nějakou podstrukturu ligandu.
     > Neměla by být příliš malá, (benzenové jádro je skoro všude), ani příliš velká.
 
@@ -99,7 +98,7 @@ as lines
 
    Klikněte na záznam v databázi. Pod názvem molekuly vpravo najdete __Find Related PDB Entry__. Stiskněte __search__. Zobrazí se Vám listina struktur, které obsahují tento ligand.
 
-1. Porovnejte chování ligandů v simulaci s experimentální strukturou.  
+3. Porovnejte chování ligandů v simulaci s experimentální strukturou.  
     Stáhněte si první strukturu z listiny z předchozího úkolu.
 
     ```python
@@ -109,16 +108,16 @@ as lines
 
     Které z navštívených vazebných míst v simulaci odpovídá experimentu?
 
-1. Zobrazte si vodíkove vazby, které se během simulace vytvoří mezi DNA a ligandem.
+4. Zobrazte si vodíkove vazby, které se během simulace vytvoří mezi DNA a ligandem.
    ```python
    dist hbonds, organic, polymer.nucleic, mode=2
    # mode=2 počítá jen vzdálenosti polárních skupin
    ```
 
-   > [!TIP]
-   > Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
+> [!TIP]
+> Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
-1. Vytvořte obrázek obsahující DNA a jen ligand vázaný na správné místo.
+5. Vytvořte obrázek obsahující DNA a jen ligand vázaný na správné místo.
     Zvolte zobrazení `spheres`, odstraňte vodíky a zabarvěte atomy uhlíku DNA a ligandu různě.
 
     Znovu se podívejte na simulaci v tomto zobrazení a sledujte mobilitu částí molekuly.
