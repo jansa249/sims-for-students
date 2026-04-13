@@ -70,7 +70,7 @@ as sticks, bb.
 
 1. Prohlédněte si celou simulaci. Co lze pozorovat?
 
-1. Porovnejte chování proteinu s průběhem hodnot RMSD v následujícím grafu (`chignolin-rmsd.png`).  
+2. Porovnejte chování proteinu s průběhem hodnot RMSD v následujícím grafu (`chignolin-rmsd.png`).  
 
    >RMSD (Root Mean Square Deviation) je průměrná vzdálenost atomů (jendotka Å nebo nm) od nějaké referenční struktury, v tomto případě je to struktura s PDB ID 1UAO.
    >Výpočet RMSD se nejčastěji provádí pouze pro atomy hlavní řetězce (v proteinu C,N,Cα,O), čímž se eliminuje pohyb mobilních postranních řetězců, který neodráží celkovou stabilitu sbalení.
@@ -79,7 +79,7 @@ as sticks, bb.
 
     ![Graf RMSD](chignolin-rmsd.png)
 
-1. Zobrazte si vodíkove vazby, které se během simulace vytvoří.
+3. Zobrazte si vodíkove vazby, které se během simulace vytvoří.
    ```python
    dist hbonds, chignolin, chignolin, mode=2
    # mode=2 počítá jen vzdálenosti polárních skupin
@@ -88,7 +88,7 @@ as sticks, bb.
 > [!TIP]
 > Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
-1. Ve stejném okně si stáhněte tuto referenční strukturu (PDB ID 1UAO) a porovnejte ji se strukturou ze simulace.
+4. Ve stejném okně si stáhněte tuto referenční strukturu (PDB ID 1UAO) a porovnejte ji se strukturou ze simulace.
    Vytvořte objekt z každé experimentální struktury:
    ```python
    split_states 1uao  # každá struktura do vlastního objektu
@@ -104,5 +104,5 @@ as sticks, bb.
    as sticks, bb.
    ```
 
-1. Znovu se podívejte na simulaci a graf RMSD.
+5. Znovu se podívejte na simulaci a graf RMSD.
 
