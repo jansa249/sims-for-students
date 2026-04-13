@@ -84,7 +84,7 @@ as sticks, bb.
    dist hbonds, chignolin, chignolin, mode=2
    # mode=2 počítá jen vzdálenosti polárních skupin
    ```
-   
+
    > [!TIP]
    > Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
