@@ -84,6 +84,7 @@ as sticks, bb.
    dist hbonds, chignolin, chignolin, mode=2
    # mode=2 počítá jen vzdálenosti polárních skupin
    ```
+   
    > [!TIP]
    > Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
@@ -93,7 +94,7 @@ as sticks, bb.
    split_states 1uao  # každá struktura do vlastního objektu
    delete 1uao  # původní objekt už nepotřebujeme
    # přeložení trajektorie a reference
-   extra_fit polymer  # polymerní části v objektů
+   extra_fit polymer  # polymerní části objektů
    # nebo
    extra_fit bb.  # páteře objektů
    ```
