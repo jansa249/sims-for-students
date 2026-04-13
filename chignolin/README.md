@@ -84,18 +84,23 @@ as sticks, bb.
    dist hbonds, chignolin, chignolin, mode=2
    # mode=2 počítá jen vzdálenosti polárních skupin
    ```
-
    > [!TIP]
-   >Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
+   > Jestli při přenastavování zobrazení vazby zmizí, spusťte příkaz `as dashes, hbonds`
 
 1. Ve stejném okně si stáhněte tuto referenční strukturu (PDB ID 1UAO) a porovnejte ji se strukturou ze simulace.
-   Vytvořte objekt jen z první struktury ensemblu:
+   Vytvořte objekt z každé experimentální struktury:
    ```python
-   create exp, 1uao, 1  # , 1 znamená, že kopírujete první strukturu z 18
-   delete 1uao  # původní objekt už nepotřebujeme, máme novy objekt 'exp'
+   split_states 1uao  # každá struktura do vlastního objektu
+   delete 1uao  # původní objekt už nepotřebujeme
    # přeložení trajektorie a reference
    extra_fit polymer  # polymerní části v objektů
+   # nebo
    extra_fit bb.  # páteře objektů
+   ```
+   Zobrazte si například jen páteř proteinů a porovnejte různé experimentální struktury (zobrazení / zakrytí kliknutím na objekt v pravé liště).
+   ```python
+   hide everything
+   as sticks, bb.
    ```
 
 1. Znovu se podívejte na simulaci a graf RMSD.
