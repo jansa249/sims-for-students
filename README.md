@@ -7,7 +7,7 @@
 
 Vítejte v repozitáři simulací pro kurz molekulárního modelování a vizualizace.
 Tento prostor slouží jako knihovna simulačních dat, kde se naučíte ovládat
-PyMOL, analyzovat dynamiku biomolekul a vytvářet vědecké ilustrace.
+PyMOL, visualizovat dynamiku biomolekul a vytvářet ilustrace.
 
 ## Dostupné simulace
 
